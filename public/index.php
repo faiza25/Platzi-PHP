@@ -48,48 +48,48 @@ $request = Zend\Diactoros\ServerRequestFactory::fromGlobals(
 
 $routerContainer = new RouterContainer();
 $map = $routerContainer->getMap();
-$map->get('index', '/PlatziPHP/',[
+$map->get('index', '/',[
         'controller'=> 'App\Controllers\IndexController',
         'action' =>'indexAction'
       ]);
 
-$map->get('addJob', '/PlatziPHP/job/add',[
+$map->get('addJob', '/job/add',[
         'controller'=> 'App\Controllers\JobsController',
         'action' =>'getAddJobAction'
       ]);
-$map->post('saveJob', '/PlatziPHP/job/add',[
+$map->post('saveJob', '/job/add',[
           'controller'=> 'App\Controllers\JobsController',
           'action' =>'getAddJobAction'
         ]);
 
-$map->get('addUser', '/PlatziPHP/users/add', [
+$map->get('addUser', '/users/add', [
     'controller' => 'App\Controllers\UsersController',
     'action' => 'getAddUser',
     'auth' => true
 
 ]);
-$map->post('saveUser', '/PlatziPHP/users/save', [
+$map->post('saveUser', '/PlatziPH/users/save', [
     'controller' => 'App\Controllers\UsersController',
     'action' => 'postSaveUser'
 ]);
 
 
-$map->get('loginForm', '/PlatziPHP/login', [
+$map->get('loginForm', '/login', [
     'controller' => 'App\Controllers\AuthController',
     'action' => 'getLogin'
 ]);
-$map->get('logout', '/PlatziPHP/logout', [
+$map->get('logout', '/logout', [
     'controller' => 'App\Controllers\AuthController',
     'action' => 'getLogout'
 ]);
 
 
-$map->post('auth', '/PlatziPHP/auth', [
+$map->post('auth', '/auth', [
     'controller' => 'App\Controllers\AuthController',
     'action' => 'postLogin'
 ]);
 
-$map->get('admin', '/PlatziPHP/admin', [
+$map->get('admin', '/admin', [
     'controller' => 'App\Controllers\AdminController',
     'action' => 'getIndex',
     'auth' => true
