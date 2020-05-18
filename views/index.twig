@@ -1,0 +1,26 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+<h1>{{name}}</h1>
+
+
+<h3>Work Experience</h3>
+
+  {% for job in jobs %}
+    <h5> {{job.title}}</h5>
+    <p> {{job.description}}</p>
+    <p>  </p>
+  {% endfor %}
+
+
+
+
+<h3>Projects</h3>
+
+<?php
+for ($i=0; $i <count($projects)  ; $i++) {
+  printElement($projects[$i]);
+}
+
+ ?>
+{% endblock %}
