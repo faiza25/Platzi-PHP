@@ -27,7 +27,7 @@ $capsule->addConnection([
     'charset'   => 'utf8',
     'collation' => 'utf8_unicode_ci',
     'prefix'    => '',
-    'port'      => getenv('DB_PORT')
+    'port'      => getenv('DB_PORT'),
 ]);
 
 // Make this Capsule instance available globally via static methods... (optional)
